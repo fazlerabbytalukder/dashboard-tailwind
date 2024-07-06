@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "avenir";
+    src: url(../dist/fonts/AvenirNextLTPro-Regular.otf) format('truetype');
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.title-font {
+    font-family: "avenir";
+}
+
+.active-nav {
+    @apply opacity-[1]
+}
+
+.main-part {
+    display: none;
+}
+
+.main-part.active {
+    display: block;
+}
+
+.user-card {
+    @apply ml-[-10px]
+}
+
+.user-card:first-child {
+    @apply ml-[0px]
+}
+
+.user-card img {
+    @apply rounded-full border-[2.08px] border-white
+}
+
+.bar {
+    transition: height 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.bar:hover {
+    background-color: #157AFF !important;
+}
+
+.bar:hover::after {
+    content: attr(data-value) '%';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 12px;
+}

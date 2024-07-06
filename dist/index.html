@@ -1,13 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>starter-file</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 class="bg-red-400">Hello from starter-file</h1>
+    <div class="flex h-screen overflow-hidden bg-primary">
+        <aside class="h-screen w-[360px] px-[80px] py-[65px]">
+            <div class="relative inline-block">
+                <img src="image/user/user-img.png" alt="user image" />
+                <span
+                    class="h-[29px] w-[29px] rounded-full bg-[#DC3434] flex justify-center items-center absolute top-[-10px] right-[-10px]">4</span>
+            </div>
+            <div class="user-details">
+                <h2 class="text-h2 text-white">Samantha</h2>
+                <p class="text-h6 text-white opacity-[0.6]">samantha@email.com</p>
+            </div>
+            <ul class="mt-[70px]">
+                <li class="mb-[30px]">
+                    <button class="tab-button text-h3 text-white opacity-[0.6] transition-colors hover:opacity-[1]"
+                        data-target="dashboard">Dashboard</button>
+                </li>
+                <li class="mb-[30px]">
+                    <button class="tab-button text-h3 text-white opacity-[0.6] transition-colors hover:opacity-[1]"
+                        data-target="expenses">Expenses</button>
+                </li>
+                <li class="mb-[30px]">
+                    <button class="tab-button text-h3 text-white opacity-[0.6] transition-colors hover:opacity-[1]"
+                        data-target="wallets">Wallets</button>
+                </li>
+                <li class="mb-[30px]">
+                    <button class="tab-button text-h3 text-white opacity-[0.6] transition-colors hover:opacity-[1]"
+                        data-target="summary">Summary</button>
+                </li>
+                <li class="mb-[30px]">
+                    <button class="tab-button text-h3 text-white opacity-[0.6] transition-colors hover:opacity-[1]"
+                        data-target="accounts">Accounts</button>
+                </li>
+                <li>
+                    <button class="tab-button text-h3 text-white opacity-[0.6] transition-colors hover:opacity-[1]"
+                        data-target="settings">Settings</button>
+                </li>
+            </ul>
+        </aside>
+        <div class="relative flex flex-1 flex-col overflow-x-hidden overflow-y-hidden bg-white m-[20px] rounded-[30px]">
+            <main>
+                <div class="flex">
+                    <!-- expences main part -->
+                    <div class="w-[70%] py-[60px] px-[70px] h-screen overflow-y-auto main-part expenses active">
+                        <!-- title part -->
+                        <div class="flex items-center justify-between">
+                            <div class="sec-title">
+                                <h1 class="text-h1 text-secondary">Expenses</h1>
+                                <p class="text-h6 text-primary opacity-[0.5]">01 - 25 March, 2020</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <div class="user-card">
+                                        <img src="./image/user/users-1.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-2.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-3.jpg" alt="user image" />
+                                    </div>
+                                </div>
+                                <button class="ml-[10px]">
+                                    <img src="./image/icon/plus-icon.svg" alt="plus icon" />
+                                </button>
+                            </div>
+                        </div>
+                        <!-- chart box -->
+                        <div class="chart-box">
+                            <div id="chart" class="flex space-x-[10px] items-end h-48"></div>
+                        </div>
+                        <!-- expences datw wise -->
+                        <div class="expences-box">
+                            <div class="flex justify-between items-center border-b border-[#DEDEDE] py-[7px] mt-[40px]">
+                                <h3 class="title-font text-h5 text-primary font-semibold">Today</h3>
+                                <button>
+                                    <img src="./image/icon/dot-bar.svg" alt="bar" />
+                                </button>
+                            </div>
+                            <div class="expence-single-card flex justify-between items-start py-[20px]">
+                                <div class="flex items-center">
+                                    <img src="./image/icon/Grocery.svg" alt="Grocery" />
+                                    <div class="ml-[15px]">
+                                        <h5 class="text-h6 text-primary font-medium">Grocery</h5>
+                                        <p class="text-h7 text-primary opacity-[0.5]">5:12 pm • Belanja di pasar</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-h6 text-primary font-semibold">-326.800</h5>
+                                </div>
+                            </div>
+                            <div class="expence-single-card flex justify-between items-start py-[20px]">
+                                <div class="flex items-center">
+                                    <img src="./image/icon/Transportation.svg" alt="Transportation" />
+                                    <div class="ml-[15px]">
+                                        <h5 class="text-h6 text-primary font-medium">Transportation</h5>
+                                        <p class="text-h7 text-primary opacity-[0.5]">5:12 pm • Naik bus umum</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-h6 text-primary font-semibold">-15.000</h5>
+                                </div>
+                            </div>
+                            <div class="expence-single-card flex justify-between items-start py-[20px]">
+                                <div class="flex items-center">
+                                    <img src="./image/icon/Housing.svg" alt="Housing" />
+                                    <div class="ml-[15px]">
+                                        <h5 class="text-h6 text-primary font-medium">Housing</h5>
+                                        <p class="text-h7 text-primary opacity-[0.5]">5:12 pm • Bayar Listrik</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-h6 text-primary font-semibold">-185.750</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expences-box">
+                            <div class="flex justify-between items-center border-b border-[#DEDEDE] py-[7px] mt-[40px]">
+                                <h3 class="title-font text-h5 text-primary font-semibold">Monday, 23 March 2020</h3>
+                                <button>
+                                    <img src="./image/icon/dot-bar.svg" alt="bar" />
+                                </button>
+                            </div>
+                            <div class="expence-single-card flex justify-between items-start py-[20px]">
+                                <div class="flex items-center">
+                                    <img src="./image/icon/Food.svg" alt="Food and Drink" />
+                                    <div class="ml-[15px]">
+                                        <h5 class="text-h6 text-primary font-medium">Food and Drink</h5>
+                                        <p class="text-h7 text-primary opacity-[0.5]">5:12 pm • Makan Steak</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-h6 text-primary font-semibold">-156.000</h5>
+                                </div>
+                            </div>
+                            <div class="expence-single-card flex justify-between items-start py-[20px]">
+                                <div class="flex items-center">
+                                    <img src="./image/icon/Entertainment.svg" alt="Entertainment" />
+                                    <div class="ml-[15px]">
+                                        <h5 class="text-h6 text-primary font-medium">Entertainment</h5>
+                                        <p class="text-h7 text-primary opacity-[0.5]">5:12 pm • Nonton Bioskop</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-h6 text-primary font-semibold">-35.200</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dashboard main part -->
+                    <div class="w-[70%] py-[60px] px-[70px] h-screen overflow-y-auto main-part dashboard">
+                        <!-- title part -->
+                        <div class="flex items-center justify-between">
+                            <div class="sec-title">
+                                <h1 class="text-h1 text-secondary">Dashboard</h1>
+                                <p class="text-h6 text-primary opacity-[0.5]">01 - 25 March, 2020</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <div class="user-card">
+                                        <img src="./image/user/users-1.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-2.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-3.jpg" alt="user image" />
+                                    </div>
+                                </div>
+                                <button class="ml-[10px]">
+                                    <img src="./image/icon/plus-icon.svg" alt="plus icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- wallets main part -->
+                    <div class="w-[70%] py-[60px] px-[70px] h-screen overflow-y-auto main-part wallets">
+                        <!-- title part -->
+                        <div class="flex items-center justify-between">
+                            <div class="sec-title">
+                                <h1 class="text-h1 text-secondary">wallets</h1>
+                                <p class="text-h6 text-primary opacity-[0.5]">01 - 25 March, 2020</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <div class="user-card">
+                                        <img src="./image/user/users-1.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-2.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-3.jpg" alt="user image" />
+                                    </div>
+                                </div>
+                                <button class="ml-[10px]">
+                                    <img src="./image/icon/plus-icon.svg" alt="plus icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- summary main part -->
+                    <div class="w-[70%] py-[60px] px-[70px] h-screen overflow-y-auto main-part summary">
+                        <!-- title part -->
+                        <div class="flex items-center justify-between">
+                            <div class="sec-title">
+                                <h1 class="text-h1 text-secondary">summary</h1>
+                                <p class="text-h6 text-primary opacity-[0.5]">01 - 25 March, 2020</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <div class="user-card">
+                                        <img src="./image/user/users-1.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-2.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-3.jpg" alt="user image" />
+                                    </div>
+                                </div>
+                                <button class="ml-[10px]">
+                                    <img src="./image/icon/plus-icon.svg" alt="plus icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accounts main part -->
+                    <div class="w-[70%] py-[60px] px-[70px] h-screen overflow-y-auto main-part accounts">
+                        <!-- title part -->
+                        <div class="flex items-center justify-between">
+                            <div class="sec-title">
+                                <h1 class="text-h1 text-secondary">accounts</h1>
+                                <p class="text-h6 text-primary opacity-[0.5]">01 - 25 March, 2020</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <div class="user-card">
+                                        <img src="./image/user/users-1.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-2.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-3.jpg" alt="user image" />
+                                    </div>
+                                </div>
+                                <button class="ml-[10px]">
+                                    <img src="./image/icon/plus-icon.svg" alt="plus icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- settings main part -->
+                    <div class="w-[70%] py-[60px] px-[70px] h-screen overflow-y-auto main-part settings">
+                        <!-- title part -->
+                        <div class="flex items-center justify-between">
+                            <div class="sec-title">
+                                <h1 class="text-h1 text-secondary">settings</h1>
+                                <p class="text-h6 text-primary opacity-[0.5]">01 - 25 March, 2020</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <div class="user-card">
+                                        <img src="./image/user/users-1.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-2.jpg" alt="user image" />
+                                    </div>
+                                    <div class="user-card">
+                                        <img src="./image/user/users-3.jpg" alt="user image" />
+                                    </div>
+                                </div>
+                                <button class="ml-[10px]">
+                                    <img src="./image/icon/plus-icon.svg" alt="plus icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right side fixed part -->
+                    <div class="w-[30%] bg-ternary py-[60px] px-[40px] h-screen">
+                        <h3 class="text-h4 text-secondary title-font">Where your money go?</h3>
+                        <div class="mt-[20px]">
+                            <div class="single-progress-bar mb-[20px]">
+                                <div class="flex justify-between items-center mb-[8px]">
+                                    <p class="text-h8 text-secondary">Food and Drinks</p>
+                                    <p class="text-h8 text-secondary">872.400</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-[5px]">
+                                    <div class="bg-[#31BA96] h-[5px] rounded-full" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <div class="single-progress-bar mb-[20px]">
+                                <div class="flex justify-between items-center mb-[8px]">
+                                    <p class="text-h8 text-secondary">Shopping</p>
+                                    <p class="text-h8 text-secondary">1.378.200</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-[5px]">
+                                    <div class="bg-[#31BA96] h-[5px] rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="single-progress-bar mb-[20px]">
+                                <div class="flex justify-between items-center mb-[8px]">
+                                    <p class="text-h8 text-secondary">Housing</p>
+                                    <p class="text-h8 text-secondary">928.500</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-[5px]">
+                                    <div class="bg-[#31BA96] h-[5px] rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            <div class="single-progress-bar mb-[20px]">
+                                <div class="flex justify-between items-center mb-[8px]">
+                                    <p class="text-h8 text-secondary">Transportation</p>
+                                    <p class="text-h8 text-secondary">420.700</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-[5px]">
+                                    <div class="bg-[#31BA96] h-[5px] rounded-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                            <div class="single-progress-bar">
+                                <div class="flex justify-between items-center mb-[8px]">
+                                    <p class="text-h8 text-secondary">Vehicle</p>
+                                    <p class="text-h8 text-secondary">520.000</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-[5px]">
+                                    <div class="bg-[#31BA96] h-[5px] rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#EDF0F6] pt-[77px] pb-[25px] px-[25px] rounded-[15px] mt-[90px]">
+                            <div class="flex justify-between items-center mt-[-120px]">
+                                <img src="image/illustration/tips-img-1.png" alt="img" />
+                                <img src="image/illustration/tips-img-2.png" alt="img" />
+                            </div>
+                            <div>
+                                <h4 class="text-h6 text-secondary">Save more money</h4>
+                                <p class="text-h9 text-[#404852]">eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim.</p>
+                                <button
+                                    class="w-full py-[13px] bg-primary text-white text-h8 uppercase rounded-[8px] mt-[15px]">VIEW
+                                    TIPS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- link -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>

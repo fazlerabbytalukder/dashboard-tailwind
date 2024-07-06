@@ -513,17 +513,425 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-green-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+.fixed {
+  position: fixed;
 }
 
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+.absolute {
+  position: absolute;
 }
 
-.bg-red-400 {
+.relative {
+  position: relative;
+}
+
+.top-\[-10px\] {
+  top: -10px;
+}
+
+.right-\[-10px\] {
+  right: -10px;
+}
+
+.m-\[20px\] {
+  margin: 20px;
+}
+
+.mt-\[70px\] {
+  margin-top: 70px;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+
+.ml-\[10px\] {
+  margin-left: 10px;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
+.ml-\[15px\] {
+  margin-left: 15px;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[8px\] {
+  margin-bottom: 8px;
+}
+
+.mt-\[90px\] {
+  margin-top: 90px;
+}
+
+.mt-\[-120px\] {
+  margin-top: -120px;
+}
+
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[29px\] {
+  height: 29px;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-\[5px\] {
+  height: 5px;
+}
+
+.w-\[360px\] {
+  width: 360px;
+}
+
+.w-\[29px\] {
+  width: 29px;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-\[10px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(10px * var(--tw-space-x-reverse));
+  margin-left: calc(10px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-\[30px\] {
+  border-radius: 30px;
+}
+
+.rounded-\[15px\] {
+  border-radius: 15px;
+}
+
+.rounded-\[8px\] {
+  border-radius: 8px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-\[\#DEDEDE\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(222 222 222 / var(--tw-border-opacity));
+}
+
+.bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+  background-color: rgb(16 16 16 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#DC3434\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 52 52 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-ternary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 252 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#31BA96\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 186 150 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#EDF0F6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 240 246 / var(--tw-bg-opacity));
+}
+
+.px-\[80px\] {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.py-\[65px\] {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.px-\[70px\] {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.py-\[7px\] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.px-\[40px\] {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.px-\[25px\] {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.py-\[13px\] {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.pt-\[77px\] {
+  padding-top: 77px;
+}
+
+.pb-\[25px\] {
+  padding-bottom: 25px;
+}
+
+.text-h2 {
+  font-size: 30px;
+}
+
+.text-h6 {
+  font-size: 16px;
+}
+
+.text-h3 {
+  font-size: 25px;
+}
+
+.text-h1 {
+  font-size: 40px;
+}
+
+.text-h5 {
+  font-size: 18px;
+}
+
+.text-h7 {
+  font-size: 14px;
+}
+
+.text-h4 {
+  font-size: 20px;
+}
+
+.text-h8 {
+  font-size: 13px;
+}
+
+.text-h9 {
+  font-size: 12px;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  color: 262A41;
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(16 16 16 / var(--tw-text-opacity));
+}
+
+.text-\[\#404852\] {
+  --tw-text-opacity: 1;
+  color: rgb(64 72 82 / var(--tw-text-opacity));
+}
+
+.opacity-\[0\.6\] {
+  opacity: 0.6;
+}
+
+.opacity-\[0\.5\] {
+  opacity: 0.5;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@font-face {
+  font-family: "avenir";
+
+  src: url(../dist/fonts/AvenirNextLTPro-Regular.otf) format('truetype');
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.title-font {
+  font-family: "avenir";
+}
+
+.active-nav {
+  opacity: 1;
+}
+
+.main-part {
+  display: none;
+}
+
+.main-part.active {
+  display: block;
+}
+
+.user-card {
+  margin-left: -10px;
+}
+
+.user-card:first-child {
+  margin-left: 0px;
+}
+
+.user-card img {
+  border-radius: 9999px;
+  border-width: 2.08px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bar {
+  transition: height 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.bar:hover {
+  background-color: #157AFF !important;
+}
+
+.bar:hover::after {
+  content: attr(data-value) '%';
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size: 12px;
+}
+
+.hover\:opacity-\[1\]:hover {
+  opacity: 1;
 }
